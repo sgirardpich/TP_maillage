@@ -31,5 +31,23 @@ class Mesh
     // -------------------------------------------------------------------------
 };
 
+//création classe Quadtree
+class QuadTree
+{
+  public:
+    //Vecteur treegrid caractérisant un carré
+    std::vector<Eigen::VectorXi> _treegrid
+    //Fonction pour subdivisé un quadtree en 4
+    function subdivide();
+
+  private:
+  // Enfants
+  QuadTree* 3; //northwest
+  QuadTree* 2; //northeast
+  QuadTree* 1; //southEast
+  QuadTree* 0; //southWest
+
+}
+
 #define _MESH_H
 #endif
