@@ -35,19 +35,28 @@ class Mesh
 class QuadTree
 {
   public:
-    //Vecteur treegrid caractérisant un carré
-    std::vector<Eigen::VectorXi> _treegrid
+    //Reference du QuadTree
+    int id;
+    //Vecteur index, combien de points dans le QuadTree
+    Eigen::VectorXi _treegridindex;
+    //Vecteur position
+    Eigen::VectorXi _treegridposition;
+    //Vecteur origine du QuadTree
+    Eigen::Vector2i _treegridorigin;
     //Fonction pour subdivisé un quadtree en 4
-    function subdivide();
+    void subdivide();
 
   private:
   // Enfants
-  QuadTree* 3; //northwest
-  QuadTree* 2; //northeast
-  QuadTree* 1; //southEast
-  QuadTree* 0; //southWest
+  //QuadTree* 3; //northwest
+  //QuadTree* 2; //northeast
+  //QuadTree* 1; //southEast
+  //QuadTree* 0; //southWest
 
 }
+
+//Vecteur treegrid caractérisant un carré
+std::vector< QuadTree > _treegrid;
 
 #define _MESH_H
 #endif
